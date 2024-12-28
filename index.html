@@ -77,12 +77,40 @@
             animation: fadeIn 2s ease-out;
         }
 
-        .hero p {
-            font-size: 1.2rem;
-            animation: fadeIn 2.5s ease-out;
+        .typing-text {
+            font-size: 1.5rem;
+            font-weight: 500;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid #ff6600;
+            width: 0;
+            animation: typing 4s steps(40) 1s forwards, blink-caret 0.75s step-end infinite;
         }
 
-        /* Animation */
+        .typing-container {
+            display: inline-block;
+            padding: 0 5px;
+        }
+
+        /* Animation for typing and blinking caret */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink-caret {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        /* Animation for fadeIn */
         @keyframes fadeIn {
             0% {
                 opacity: 0;
@@ -172,7 +200,9 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <h1>Bienvenido a Nuestro Servidor FiveM</h1>
-        <p>¡Únete a la diversión, juega con amigos y explora nuevas aventuras!</p>
+        <div class="typing-container">
+            <span class="typing-text" id="typing-text"></span>
+        </div>
     </section>
 
     <!-- Tienda Section -->
@@ -199,6 +229,52 @@
         <p>&copy; 2024 Servidor FiveM. Todos los derechos reservados.</p>
         <p>Visita nuestro <a href="https://discord.gg" target="_blank">Discord</a> para más detalles.</p>
     </footer>
+
+    <script>
+        const texts = [
+            "¡Únete a la diversión, juega con amigos y explora nuevas aventuras!",
+            "Participa en eventos únicos, gana premios y personaliza tu experiencia.",
+            "¡Conoce nuevas personas y forma parte de una comunidad increíble!"
+        ];
+
+        let textIndex = 0;
+        const typingTextElement = document.getElementById('typing-text');
+
+        function typeText(text, i, callback) {
+            if (i < text.length) {
+                typingTextElement.innerHTML += text.charAt(i);
+                setTimeout(function () {
+                    typeText(text, i + 1, callback);
+                }, 100);
+            } else if (callback) {
+                setTimeout(callback, 1000);
+            }
+        }
+
+        function deleteText(callback) {
+            let text = typingTextElement.innerHTML;
+            if (text.length > 0) {
+                typingTextElement.innerHTML = text.slice(0, text.length - 1);
+                setTimeout(function () {
+                    deleteText(callback);
+                }, 50);
+            } else if (callback) {
+                setTimeout(callback, 500);
+            }
+        }
+
+        function cycleText() {
+            deleteText(function () {
+                typeText(texts[textIndex], 0, function () {
+                    textIndex = (textIndex + 1) % texts.length;
+                    cycleText();
+                });
+            });
+        }
+
+        // Start the typing effect
+        cycleText();
+    </script>
 
 </body>
 
