@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Servidor FiveM - Inicio</title>
+    <title>West Roleplay - Inicio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
         /* Reset styles */
@@ -64,13 +64,13 @@
         }
 
         nav ul li a:hover {
-            color: #ff6600;
+            color: #6200ff;
         }
 
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: url('https://example.com/background.jpg') no-repeat center center/cover;
+            background: url('https://media.discordapp.net/attachments/933858923692318730/1322707301387468900/image.png?ex=6771daab&is=6770892b&hm=7b03060b637ecad035d84956f1a9dcc2e67f13be6f7c2228565d02550a5bcd79&=&format=webp&quality=lossless&width=1024&height=457') no-repeat center center/cover;
             text-align: center;
             display: flex;
             justify-content: center;
@@ -94,7 +94,7 @@
             display: inline-block;
             white-space: nowrap;
             overflow: hidden;
-            border-right: 3px solid #ff6600;
+            border-right: 3px solid #6200ff;
             width: 0;
             animation: typing 4s steps(40) 1s forwards, blink-caret 0.75s step-end infinite;
         }
@@ -140,7 +140,7 @@
         .animation-container {
             padding: 50px 20px;
             text-align: center;
-            background-color: #333;
+            background-color: #1e1e1e;
             position: relative;
         }
 
@@ -169,7 +169,7 @@
             left: 0;
             right: 0;
             text-align: center;
-            color: #ff6600; /* Naranja para los nombres */
+            color: #6200ff; /* Naranja para los nombres */
             font-size: 1.5rem;
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
@@ -190,7 +190,7 @@
         }
 
         footer a {
-            color: #ff6600;
+            color: #6200ff;
             text-decoration: none;
         }
 
@@ -227,6 +227,40 @@
             font-weight: 500;
             animation: float 2s ease-in-out infinite;
         }
+
+        /* Button Styles */
+.discord-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #4c0570, #000000); /* Gradiente de colores */
+    color: white;
+    font-size: 1.2rem;
+    padding: 18px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    width: 60%;
+    max-width: 420px;
+    margin: 30px auto;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.discord-button:hover {
+    background: linear-gradient(45deg, #000000, #4e0074); /* Gradiente más oscuro al pasar el ratón */
+    transform: translateY(-5px); /* Efecto de elevación */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al pasar el ratón */
+}
+
+.discord-button img {
+    width: 28px;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+.discord-button:hover img {
+    transform: scale(1.1); /* Aumenta el tamaño del logo al pasar el ratón */
+}
     </style>
 </head>
 
@@ -234,11 +268,12 @@
 
     <!-- Navigation Bar -->
     <nav>
-        <img src="https://media.discordapp.net/attachments/933858923692318730/1322203236031139933/image_7.png?ex=677156b8&is=67700538&hm=0c8073e7d94bcf817028bf15bb5ebc7f26e4ffff8bc2a063c3cde84172505ca2&=&format=webp&quality=lossless&width=840&height=472" alt="Logo">
+        <img src="/images/logo.png">
         <ul>
-            <li><a href="/normativas" id="normativas-link">Normativas</a></li>
-            <li><a href="/tienda" id="tienda-link">Tienda</a></li>
-            <li><a href="/terms" id="terms-link">Terminós y Condiciones</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a href="normativas.html">Normativas</a></li>
+            <li><a href="terms.html">Terminós y Condiciones</a></li>
         </ul>
     </nav>
 
@@ -249,18 +284,24 @@
             <span class="typing-text" id="typing-text"></span>
         </div>
         <div class="scroll-down">↓</div>
+
+        <!-- Discord Button -->
+        <a href="https://discord.gg/nkQGa7txyf" class="discord-button" target="_blank">
+            <img src="/images/discord.png">
+            Forma parte de nuestra comunidad
+        </a>
     </section>
 
     <!-- Animation Section -->
     <section class="animation-container">
         <h2 class="founders-text">¡Explora nuestros Founders!</h2>
-        <div class="animation-box" style="background-image: url('https://media.discordapp.net/attachments/933858923692318730/1322693013809397830/28b66b19212e63388e0e292efe718833.jpg?ex=6771cd5c&is=67707bdc&hm=71e04ae4db09e503b15b3a325cfc16dc6ca20677561aa12facd1bfa024850f9b&=&format=webp&width=381&height=472');">
+        <div class="animation-box" style="background-image: url('/images/piro.png');">
             <div class="box-text">
                 <div>Piiiiro91k</div>
                 <div class="box-subtext">Founder</div>
             </div>
         </div>
-        <div class="animation-box" style="background-image: url('https://media.discordapp.net/attachments/933858923692318730/1322693195091673159/e4898b063591d51ecb331813b8434466.jpg?ex=6771cd88&is=67707c08&hm=22bfc433a8011ce26483d52a5e8b28968031a1f58cfa7e4071f88ed79a9a62c4&=&format=webp&width=472&height=472');">
+        <div class="animation-box" style="background-image: url('/images/santi.png');">
             <div class="box-text">
                 <div>sanntilua</div>
                 <div class="box-subtext">Founder</div>
@@ -275,9 +316,9 @@
 
     <script>
         const texts = [
-            "Diversión Asegurada",
-            "Creado Pensando en Ti y en tu Experiencia",
-            "Servidor Rápido y Confiable, Hosteado en Argentina"
+            "¡Diversión Asegurada!",
+            "¡Creado Pensando en Ti y en tu Experiencia!",
+            "¡Servidor Rápido y Confiable, Hosteado en Argentina!"
         ];
 
         let textIndex = 0;
