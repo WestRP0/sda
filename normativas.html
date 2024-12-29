@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Normativas - West RP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #121212, #1a1a1a);
+            color: white;
+            line-height: 1.6;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        nav {
+            background: #1a1a1a;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            border-bottom: 2px solid #333;
+            transition: background 0.3s;
+        }
+
+        nav img {
+            height: 60px;
+            animation: fadeIn 1s ease;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            padding: 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            color: #ff6600;
+            transform: scale(1.2);
+            background-color: rgba(255, 102, 0, 0.2);
+        }
+
+        .hero {
+            
+            height: 400px;background: url('https://media.discordapp.net/attachments/933858923692318730/1322707301387468900/image.png?ex=6771daab&is=6770892b&hm=7b03060b637ecad035d84956f1a9dcc2e67f13be6f7c2228565d02550a5bcd79&=&format=webp&quality=lossless&width=1024&height=457') center/cover no-repeat;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            font-size: 2.5rem;
+            font-weight: bold;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 2s ease-out;
+        }
+
+        .hero h1 {
+            margin: 0;
+            animation: fadeInText 2s forwards;
+        }
+
+        .hero p {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            animation: fadeInText 3s forwards;
+        }
+
+        .normativas {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #1d1d1d;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 1.5s ease-out;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .normativas h2 {
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #ff6600;
+            animation: fadeIn 2s ease;
+        }
+
+        h3 {
+            font-size: 2rem;
+            margin-top: 30px;
+            color: #ff6600;
+            border-bottom: 2px solid #444;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            animation: fadeInLeft 1s ease;
+        }
+
+        ul {
+            list-style-type: none;
+            margin-left: 20px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0;
+            animation: fadeIn 2s ease forwards;
+        }
+
+        li strong {
+            color: #ff6600;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            padding: 30px 0;
+            text-align: center;
+            color: #888;
+            font-size: 1rem;
+            margin-top: 50px;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        footer a {
+            color: #ff6600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        /* Animaciones */
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .hero {
+                height: 300px;
+                font-size: 2rem;
+            }
+
+            .normativas {
+                padding: 20px;
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <img src="https://media.discordapp.net/attachments/933858923692318730/1322693107950817373/image_7.png?ex=6771cd73&is=67707bf3&hm=e31c047f578039b5a3f6e6e68d0479de87fbc6d696f221acb6e431aaaa4e8aaa&=&format=webp&quality=lossless&width=840&height=472" alt="Logo">
+        <ul>
+            <li><a href="/inicio" id="inicio-link">Inicio</a></li>
+            <li><a href="/tienda" id="tienda-link">Tienda</a></li>
+            <li><a href="/terms" id="terms-link">Terminós y Condiciones</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Bienvenido a West RP</h1>
+        <p>Consulta nuestras normativas antes de continuar</p>
+    </section>
+
+    <section class="normativas">
+        <h2>Normativas</h2>
+    
+        <h3>Sección A: Conceptos Generales del Rol</h3>
+        <ul>
+            <li><strong>1.1 IC (In Character):</strong> Todo lo que sucede con nuestro personaje o en el entorno de la ciudad impacta directamente en sus decisiones. Es importante recordar que en el Discord contamos con una categoría de canales IC, donde deberás interpretar y actuar como si fueras tu personaje (Instagram, Mercado Libre, Inmobiliaria, Deep Web).</li>
+            <li><strong>1.2 OOC (Out Of Character):</strong> Todas las acciones que se llevan a cabo, se mencionan o se realizan fuera del contexto de nuestro personaje y del entorno de la ciudad, es decir, fuera del rol.</li>
+            <li><strong>1.3 RDE (Rol de entorno):</strong> Lo que no vemos OOC pero forma parte del entorno NPC de la ciudad, como no ir en contramano o conducir por una vereda. Ignorar esto puede llevar a sanciones.</li> 
+            <li><strong>1.4 MG (MetaGaming):</strong> El MG ocurre al usar información externa al juego para beneficio dentro de él. Está prohibido y será sancionado.</li> 
+            <li><strong>1.5 PG (PowerGaming):</strong> Realizar acciones ilógicas o imposibles en la vida real, forzar el rol de otro sin permitirle reaccionar, o abusar de la tercera persona para ganar ventaja, como disparar desde un muro, está prohibido y será sancionado.</li> 
+            <li><strong>1.6 DM (DeathMatch):</strong> Atacar o eliminar a otros jugadores sin razón previa está prohibido y será sancionado.</li> 
+            <li><strong>1.7 VDM (Vehicle DeathMatch):</strong> Usar un vehículo para atacar o eliminar a otro jugador está prohibido y será sancionado.</li> 
+            <li><strong>1.8 PK (Player Kill):</strong> Es una muerte temporal del personaje, implicando olvidar los eventos de ese rol y adaptarse a su estado físico al despertar.</li> 
+            <li><strong>1.9 PKT (Player Kill Total):</strong> El PKT es la muerte definitiva de un personaje dentro de un contexto de rol importante, como la salida de una facción o mafia, implicando olvidar toda información obtenida sobre esta.</li>
+            <li><strong>1.10 CK (Character Kill):</strong> Es la MUERTE TOTAL de un personaje, conlleva la pérdida total de sus bienes (excepto items únicos de donación). No se podrá volver a rolear con el mismo nombre, se debe crear un personaje e historia nuevos. Está totalmente prohibido recibir cualquier bien (dinero, casas, coches, etc.) del personaje anterior al nuevo. Tampoco podrás recibir ayuda de un amigo de tu vida anterior. En caso de realizarse ambas personas serán sancionadas. Existen tres tipos de CK: El Voluntario, podrás hacerte un auto CK voluntariamente por motivos propios. El Forzado, se le podrá forzar un CK a otra persona presentando pruebas sobre el motivo e información hacia el mismo mediante ticket. Debe ser aprobado previamente por el Head Staff vía ticket de soporte en Discord. Por último el CK Administrativo, es una medida administrativa que realiza el cuerpo del Staff hacia un usuario si se lo cree necesario, generalmente se realiza cuando una persona llega a una cierta cantidad de sanciones masivas.</li>
+            <li><strong>1.11 RK (Revenge Kill):</strong> Tomar venganza sobre los usuarios involucrados en un PK reciente está prohibido. El personaje asesinado no podrá regresar a la zona hasta que los demás usuarios terminen su rol. Infringir esta regla conlleva sanción.</li>
+            <li><strong>1.12 CJ (CarJacking):</strong> Robar un vehículo a otro jugador sin rol previo, en una zona segura o forzando la animación para sacarlo, está prohibido. No se podrá robar para moverse más rápido sin un rol previo con el jugador. Infringir esta regla conlleva sanción.</li>
+            <li><strong>1.13 BA (Bug Abuse):</strong> Abusar de un bug o exploit para beneficio propio está prohibido y será sancionado gravemente, incluyendo medidas permanentes o CK Administrativo.</li>
+            <li><strong>1.14 Uso del /me:</strong> Es el comando que se utiliza para representar acciones que no están en animadas en el juego.</li>
+            <li><strong>1.15 Uso del /do:</strong> El comando narrativo o de entorno se usa en tercera persona para enriquecer el rol, describiendo aspectos del personaje como su apariencia, sentimientos o entorno. Nunca se podrá mentir al usarlo.</li>
+            <li><strong>1.16 Uso de comunicaciones externas (Discord, TS3, etc):</strong> Está prohibido usar programas para comunicarte OOC con un usuario IC; se sancionará como MG. Se debe usar el chat de voz o la radio IC para comunicaciones dentro del rol, y el chat OOC para dudas o aclaraciones fuera de rol.</li>
+        </ul>
+                </ul>
+            </li>
+                <ul>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Sección B: Normativas del Servidor</h3>
+        <ul>
+            <li><strong>2.1 Fair Play:</strong> El juego limpio en roles, significa siempre respetar las normativas básicas del rol, servidor y a ambos usuarios. Comportamientos tóxicos y abusivos serán severamente sancionados.</li>
+            <li><strong>2.2 Valorar tu vida:</strong> Prioriza la supervivencia de tu personaje ante cualquier situación. No hacerlo conlleva una sanción.</li>
+            <li><strong>2.3 Evadir Rol:</strong> Está prohibido evadir un rol, como ir a zonas seguras o desconectarse para evitarlo. Puede conllevar sanción.</li>
+            <li><strong>2.4 Volver al Rol:</strong> Está prohibido reintegrarse a un rol sin respetar el PK o tras abandonar la zona del rol.</li>
+            <li><strong>2.5 Forzar Rol:</strong> Está prohibido insistir en realizar un rol si la otra persona no lo acepta. Puede conllevar una sanción.</li>
+            <li><strong>2.6 Quitear en Rol:</strong> Desconectarse adrede durante un rol está prohibido y conlleva sanción inapelable.</li>
+            <li><strong>2.7 Cortar Rol:</strong> Solo el staff puede decidir detener un rol. No hacerlo sin autorización conlleva sanción.</li>
+            <li><strong>2.8 Rol Ajeno:</strong> Interferir en un rol donde no estás involucrado directamente está prohibido. Puede conllevar sanción.</li>
+            <li><strong>2.9 Estado de coma o inconsciencia:</strong> El estado de coma es simulado mediante el comando /do, y es temporal.</li>
+            <li><strong>2.10 Trabajos legales:</strong> No se puede extorsionar o robar a alguien que realiza trabajos legales, salvo en casos específicos.</li>
+            <li><strong>2.11 Uso de /twt:</strong> Es el comando para el chat IC público. No se deben ofrecer servicios ilegales.</li>
+            <li><strong>2.12 Uso de /anon:</strong> Es el chat IC anónimo, donde se pueden tratar actividades ilícitas, pero la PFA/GNA no puede verlo salvo excepciones.</li>
+            <li><strong>2.13 Ventas de objetos OOC:</strong> Las ventas OOC están permitidas solo para ciertos artículos como autos ADDON y casas. Deben realizarse mediante un ticket de soporte.</li>
+            <li><strong>2.14 Ventas de vehículos VIP:</strong> La venta de coches VIP a usuarios no VIP está prohibida.</li>
+            <li><strong>2.15 Multicuentas:</strong> El uso de multicuentas está totalmente prohibido.</li>
+            <li><strong>2.16 Caracteres especiales:</strong> Está prohibido el uso de fuentes, caracteres raros o emojis. Los nombres de colores están permitidos.</li>
+            <li><strong>2.17 Reportes:</strong> Los reportes deben hacerse mediante el comando /reportar (ID) (MOTIVO) o en la sala de soporte en Discord.</li>
+            <li><strong>2.18 Uso de casco:</strong> Está prohibido el uso de cascos que beneficien a la persona. Se permiten cascos que no protejan de balas.</li>
+            <li><strong>2.19 Uso de peds:</strong> Los peds pueden usarse en ciertas situaciones, pero no en facciones o roles agresivos que afecten el desarrollo del juego.</li>
+        </ul>
+
+        <h3>Sección D: Uso de Armas</h3>
+    <ul>
+        <li><strong>4.1 Tipos de armas:</strong> Existen cuatro categorías de armas: 
+            <ul>
+                <li>Armas Cortas: Pistolas y armas cuerpo a cuerpo.</li>
+                <li>Armas Medias: Subfusiles y Escopetas (TEC-9 y APPISTOL se consideran subfusiles).</li>
+                <li>Armas Largas: Rifles y Fusiles.</li>
+                <li>Armas Especiales: Snipers y Ametralladoras (solo pueden usarlas los usuarios con membresía VIP activa).</li>
+            </ul>
+        </li>
+        <li><strong>4.2 Uso de un arma:</strong> El uso de armas debe siempre tener un rol previo y ser la última opción. No se podrá matar a alguien que esté colaborando.</li>
+        <li><strong>4.3 Armamento portable:</strong> En la ciudad se pueden portar Pistolas y Escopetas, mientras que las Mafias pueden portar Subfusiles. Fuera de ciudad, todos los tipos de armas están permitidos. Las Armas Especiales deben respetar un límite de 2 pisos de altura para su uso.</li>
+        <li><strong>4.4 Enfrentamiento Igualado:</strong> Si dos personas sacan el arma al mismo tiempo, pueden dispararse sin necesidad de valorar la vida.</li>
+        <li><strong>4.5 Diferencia de número:</strong> En enfrentamientos con más de una persona, se debe valorar la vida si hay una diferencia de más de 2 personas.</li>
+        <li><strong>4.6 Tiro Limpio:</strong> Si un compañero está de rehén, deben acatar las órdenes de quien lo tiene apuntado, o se considerará que no se valora su vida. Esta norma se anula si hay una superioridad numérica de 4 contra el agresor o si hay 2 o más rehenes.</li>
+    </ul>
+
+    <h3>Sección E: Robos a Establecimientos</h3>
+    <ul>
+        <li><strong>5.1 Disponibilidad:</strong> Antes de realizar un robo, se debe preguntar por /anon si la PFA/GNA está disponible. La PFA/GNA responderá si está disponible.</li>
+        <li><strong>5.2 Negociaciones:</strong> Los ladrones deben tener el botín para comenzar las negociaciones. Habrá un negociador en el robo que coordinará la entrada al establecimiento. El negociador no puede ser lastimado ni tomado de rehén.</li>
+        <li><strong>5.3 Robos disponibles y sus requisitos:</strong> 
+            Robos a Establecimientos:
+            <ul>
+                <li><strong>Gasolinera/Tienda:</strong> Atracadores mínimos 1, máximos 3. Policía mínima 1, máxima 3. Rehenes permitidos: 1 máximo. Armamento permitido: Pistolas (sin humos/latas/molotovs). Tirador: Prohibido.</li>
+                <li><strong>Banco Fleeca:</strong> Atracadores mínimos 3, máximos 5. Policía mínima 3, máxima 7. Rehenes permitidos: 3 máximo. Armamento permitido: Pistolas, Escopetas, Subfusiles (1 humo, 3 latas, 1 molotov). Tiradores: 2 máximo.</li>
+                <li><strong>Facebook:</strong> Atracadores mínimos 3, máximos 5. Policía mínima 4, máxima 7. Rehenes permitidos: 3 máximo. Armamento permitido: Pistolas, Escopetas, Subfusiles (2 humos, 3 latas, 1 molotov). Tiradores: Prohibido.</li>
+                <li><strong>Casa Michael:</strong> Atracadores mínimos 2, máximos 4. Policía mínima 2, máxima 6. Rehenes permitidos: 2 máximo. Armamento permitido: Pistolas, Escopetas, Subfusiles (1 humo, 2 latas, 1 molotov). Tiradores: Prohibido.</li>
+                <li><strong>Banco Central:</strong> Atracadores mínimos 5, máximos 10. Policía mínima 5, máxima 12. Rehenes permitidos: 5 máximo. Armamento permitido: Pistolas, Escopetas, Subfusiles, Fusiles de Asalto (3 humos, 6 latas, 2 molotovs). Tiradores: Prohibido.</li>
+                <li><strong>Maze Bank:</strong> Atracadores mínimos 3, máximos 4. Policía mínima 3, máxima 6. Rehenes permitidos: 3 máximo. Armamento permitido: Pistolas, Escopetas, Subfusiles (2 humos, 3 latas, 1 molotov). Tiradores: Prohibido.</li>
+                <li><strong>Humane:</strong> Atracadores mínimos 4, máximos 8. Policía mínima 4, máxima 8. Rehenes permitidos: 4 máximo. Armamento permitido: Pistolas, Escopetas, Subfusiles, Fusiles de Asalto (4 humos, 6 latas, 3 molotovs). Tiradores: Prohibido.</li>
+                <li><strong>Joyería (Robo Express):</strong> Atracadores mínimos 3, máximos 4. Policía mínima 3, máxima 6. Rehenes: No permitidos. Armamento permitido: Pistolas, Escopetas, Subfusiles (2 humos, 2 latas, 1 molotov). Tirador: Prohibido.</li>
+                <li><strong>Estadio:</strong> Atracadores mínimos 3, máximos 6. Policía mínima 3, máxima 8. Rehenes: No permitidos. Armamento permitido: Pistolas, Escopetas, Subfusiles (2 humos, 3 latas, 1 molotov). Tirador: Prohibido.</li>
+                <li><strong>Subte:</strong> Atracadores mínimos 3, máximos 4. Policía mínima 3, máxima 6. Rehenes permitidos: 3 máximo. Armamento permitido: Pistolas, Escopetas, Subfusiles (2 humos, 4 latas, 1 molotov). Tiradores: Prohibido.</li>
+                <li><strong>Rancho Abandonado:</strong> Atracadores mínimos 4, máximos 6. Policía mínima 4, máxima 6. Rehenes permitidos: 3 máximo. Armamento permitido: Pistolas, Escopetas, Subfusiles, Fusiles de Asalto (3 humos, 4 latas, 2 molotovs). Tirador: Prohibido.</li>
+                <li><strong>Carnicería:</strong> Atracadores mínimos 8, máximos 10. Policía mínima 8, máxima 14. Rehenes permitidos: 5 máximo. Armamento permitido: Pistolas, Escopetas, Subfusiles, Fusiles de Asalto (4 humos, 8 latas, 3 molotovs). Tirador: Prohibido.</li>
+                <li><strong>Atentado a Comisaría PFA/GNA:</strong> Terroristas (mafias) mínimo 12, máximo 20. Oficiales mínimos 15, máximo 25. Rehenes: No permitidos. Armamento permitido: Pistolas, Escopetas, Subfusiles, Fusiles de Asalto. (Sin humos, latas o molotovs). Tiradores: Prohibido. Este rol debe ser aprobado por staff.</li>
+            </ul>
+        </li>
+        <li><strong>5.4 Latas y Molotov:</strong> Se podrá negociar el uso de ciertos objetos como latas y Molotovs entre los ladrones y la PFA.</li>
+        <li><strong>5.5 Escape:</strong> Se podrá negociar una "Salida Libre" sin obstáculos, con un máximo de 2 segundos para escapar.</li>
+        <li><strong>5.6 Precio Rehenes:</strong> Se establece un precio máximo por cada rehén, dependiendo de su rol (civil o oficial de la PFA/GNA).</li>
+        <li><strong>5.7 Número Atracadores-Oficiales:</strong> En un robo, los ladrones no pueden superar en número a los oficiales, en caso de ser así, algunos ladrones deben abandonar el lugar.</li>
+        <li><strong>5.8 Empate:</strong> En caso de empate durante un robo, ganará la PFA/GNA.</li>
+        <li><strong>5.9 Retiro:</strong> Si la PFA/GNA no está presente, los ladrones no podrán retirarse del robo.</li>
+        <li><strong>5.10 Duración:</strong> Los robos no tienen duración específica.</li>
+        <li><strong>5.11 Tiradores:</strong> Los tiradores no tienen límite de altura, pero deben mantener una distancia razonable del establecimiento.</li>
+    </ul>
+    <h3>Sección F: Roles Agresivos</h3>
+    <ul>
+        <li><strong>6.1 Duración del Rol Agresivo:</strong> Un rol agresivo debe durar al menos 2 minutos. Al finalizar, se deberán esperar 2 minutos para retirarse del lugar. La duración máxima de un rol agresivo es de 15 minutos.</li>
+        <li><strong>6.2 Cantidad de Civiles en Rol Agresivo:</strong> El límite de civiles es de 4 personas, excepto en robos a establecimientos. Para mafias, el límite es de 12 personas en un rol agresivo.</li>
+        <li><strong>6.3 Robo a Jugadores sin PFA:</strong> Se podrá robar a jugadores sin PFA en servicio, siempre que haya al menos 2 más en servicio. No se puede robar a un policía cuando lleva las sirenas encendidas.</li>
+        <li><strong>6.4 No Matar a Civiles que Colaboran:</strong> No se puede matar a civiles que colaboran. Si no colaboran o no responden, se puede matar tras 5 segundos sin evidencias de que valoren su vida.</li>
+        <li><strong>6.5 Prohibición de Robar a Trabajadores Legales:</strong> Está prohibido robar a trabajadores legales (ej. Sames, basurero, minero) si usan ropa de trabajo. Robar objetos de trabajo también está prohibido.</li>
+        <li><strong>6.6 Ayuda a Jugadores con Ropa por Defecto:</strong> Está prohibido robar o secuestrar a usuarios con ropa por defecto. En esos casos, se debe reportar el problema para ayudarles.</li>
+        <li><strong>6.7 Prohibición de Forzar Rol en Cajeros y Más:</strong> No se puede obligar a alguien a sacar dinero de un cajero, abrir su casa o baúl, o entregarnos las llaves de su vehículo. Esto es forzar rol y conlleva sanción.</li>
+        <li><strong>6.8 Campeo de Zonas:</strong> Está prohibido campear una zona con el único fin de robar. Se debe permitir la huida de la persona antes de iniciar un rol agresivo, esperando al menos 20 segundos.</li>
+        <li><strong>6.9 Asalto a Personas en Vehículos:</strong> Para asaltar a alguien en su vehículo, el vehículo atacante debe pedir que frene. Si no lo hace, puede disparar a las ruedas o al motor para detenerlo.</li>
+        <li><strong>6.10 Prohibición de Llevar Jugadores de una Zona a Otra:</strong> No se puede llevar a un jugador de una zona a otra con el motivo de robarle.</li>
+        <li><strong>6.11 Rol Previo para Asaltos desde un Vehículo:</strong> Al comenzar un rol agresivo desde un vehículo, se debe tener un rol previo y esperar 5 segundos antes de abrir fuego a las ruedas o al motor.</li>
+        <li><strong>6.12 Cachear con Arma en Mano:</strong> Se puede cachear a una persona con arma en mano, ya sea corta, media o larga.</li>
+        <li><strong>6.13 Cachear el DNI:</strong> Al cachear el DNI de una persona, debe haber un rol que lo justifique. No se puede cachear el DNI a un muerto, ya que eso sería forzar rol.</li>
+        <li><strong>6.14 No Iniciar un Rol Agresivo tras la Revivida del SAME:</strong> No se podrá iniciar un rol agresivo tras la revivida de SAME de un muerto.</li>
+    </ul>
+    <h3>Sección G: Secuestros</h3>
+    <ul>
+        <li><strong>7.1 Requisitos para Secuestrar:</strong> Para secuestrar a un civil se requiere un mínimo de 2 Policías en servicio. Para secuestrar a un Oficial, se necesitan 3 Policías en servicio.</li>
+        <li><strong>7.2 Valorar Vida del Rehén:</strong> El secuestro no debe tener como objetivo la muerte del rehén, debe buscarse un intercambio por su liberación. La duración máxima del secuestro es de 25 minutos.</li>
+        <li><strong>7.3 Trabajadores Legales:</strong> Al igual que en los robos, no se puede secuestrar a trabajadores en servicio (por ejemplo, Sames, basurero, minero, etc.).</li>
+        <li><strong>7.4 Comunicaciones:</strong> Durante el secuestro, se pueden cortar las comunicaciones roleando los comandos /do y /me. Tanto la Mafia como la Policía deben informar por su frecuencia de radio si están siendo secuestrados.</li>
+        <li><strong>7.5 Dinero a Pedir en Rescate:</strong> El rescate puede solicitarse con los siguientes montos según el tipo de rehén:
+            <ul>
+                <li>Civil: $500,000</li>
+                <li>Recluta y Cabo: $2,000,000</li>
+                <li>Sargento: $3,000,000</li>
+                <li>Suboficial: $5,000,000</li>
+                <li>Inspector: $8,000,000</li>
+                <li>Subcomisario, Comisario, Jefe: $20,000,000</li>
+            </ul>
+            <h3>Sección H: Vehículos</h3>
+            <ul>
+                <li><strong>8.1 Vehículos Legales:</strong> Queda prohibido el uso de coches de trabajo para acciones ajenas a su propósito.</li>
+                <li><strong>8.2 Ruedas Pinchadas:</strong> Si una rueda está pinchada, la velocidad máxima será 60 km/h, y en caso de riesgo o fuga, 150 km/h. Si se pinchan dos o más ruedas, el vehículo debe detenerse por completo. Las motos no pueden circular con rueda pinchada.</li>
+                <li><strong>8.3 Roles Agresivos en Vehículos:</strong> Para iniciar un rol agresivo desde un vehículo, se debe tener un rol previo y esperar 5 segundos para disparar. No se podrá disparar a matar desde un vehículo en movimiento, pero sí si está detenido. Para robar a alguien fuera de un vehículo, se debe bajar del vehículo para que te valore la vida.</li>
+                <li><strong>8.4 Autos VIP:</strong> Está prohibida la venta de vehículos VIP a personas sin VIP, lo cual conlleva sanción.</li>
+                <li><strong>8.5 Evadir Rol en Vehículo:</strong> Está prohibido guardar un vehículo en el garaje durante una persecución o rol agresivo. Esto será sancionado.</li>
+                <li><strong>8.6 Posibilidades en el Vehículo:</strong> El manejo del vehículo debe ser realista, y no se permitirá el uso irresponsable del automóvil (ej. llevar más personas de las permitidas en una moto o usar vehículos inapropiados para terrenos montañosos).</li>
+                <li><strong>8.7 Vehículos Blindados:</strong> Los vehículos blindados resisten armas de fuego, pero no podrán ser forzados de ninguna manera. En caso de tiroteo, los ocupantes pueden permanecer dentro del vehículo, pero no abusar de su blindaje ni ignorar la vida de otros jugadores. Si el vehículo queda inutilizado o acorralado, se tiene un máximo de 30 segundos para valorar la vida. Los blindados deben usarse fuera de la ciudad y para actos ilícitos.</li>
+            </ul>
+            <h3>Sección H: Vehículos</h3>
+            <ul>
+                <li><strong>9.1:</strong> No se debe usar el "/do sería liviano?", ya que esto será sancionado como Forzar Rol.</li>
+                <li><strong>9.2:</strong> Correr con cuerpos está permitido, pero no saltar ni llevarlos con arma en mano. Esto será sancionado como PG.</li>
+                <li><strong>9.3:</strong> Está prohibido mentir en el /do. Hacerlo será sancionado como Evadir Rol.</li>
+                <li><strong>9.4:</strong> Si nos inician un rol agresivo y nos roban, no se podrá cerrar el baúl. Esto será sancionado como Evadir Rol.</li>
+                <li><strong>9.5:</strong> No está permitido campear zona en: (Zonas rojas).</li>
+            </ul>
+        </section>
+
+    <footer>
+        <p>&copy; 2024 West Roleplay. Todos los derechos reservados.</p>
+        <p>Visita nuestro <a href="https://discord.gg/nkQGa7txyf" target="_blank">Discord</a> para más detalles.</p>
+    </footer>
+
+</body>
+
+</html>
