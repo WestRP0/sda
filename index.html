@@ -350,6 +350,7 @@
         function cycleText() {
             setTimeout(function () {
                 deleteText(function () {
+            
                     setTimeout(function () {
                         typeText(texts[textIndex], 0, function () {
                             textIndex = (textIndex + 1) % texts.length;
