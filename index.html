@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Servidor FiveM</title>
+    <title>Servidor FiveM - Inicio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
         /* Reset styles */
@@ -20,6 +20,7 @@
             background-color: #1a1a1a;
             color: white;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         /* Navigation Bar */
@@ -30,6 +31,14 @@
             top: 0;
             z-index: 100;
             transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav img {
+            height: 60px;
+            margin-left: 20px;
         }
 
         nav:hover {
@@ -69,6 +78,8 @@
             flex-direction: column;
             color: white;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            position: relative;
+            overflow: hidden;
         }
 
         .hero h1 {
@@ -110,69 +121,72 @@
             }
         }
 
-        /* Animation for fadeIn */
-        @keyframes fadeIn {
+        /* Floating animation */
+        @keyframes float {
             0% {
-                opacity: 0;
-                transform: translateY(50px);
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
             }
 
             100% {
-                opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        /* Tienda Section */
-        .tienda {
+        /* Animation Section */
+        .animation-container {
             padding: 50px 20px;
             text-align: center;
             background-color: #333;
+            position: relative;
         }
 
-        .tienda h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: #ff6600;
+        .animation-box {
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+            background-color: #444;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            transition: transform 0.3s ease; /* Transición suave para el hover */
         }
 
-        .tienda-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
+        .animation-box:hover {
+            transform: scale(1.1); /* Agranda la imagen al pasar el mouse */
         }
 
-        .card {
-            background: #444;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* Text Style for Names */
+        .box-text {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: #ff6600; /* Naranja para los nombres */
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-            font-size: 1.6rem;
-        }
-
-        .card p {
+        .box-subtext {
             font-size: 1rem;
-            color: #ccc;
+            font-weight: 400;
         }
 
-        /* Footer */
         footer {
             background-color: #222;
             padding: 20px;
             text-align: center;
             color: #888;
             font-size: 1rem;
+            position: relative;
         }
 
         footer a {
@@ -183,6 +197,36 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        /* Scroll animation */
+        .scroll-down {
+            position: absolute;
+            bottom: 90px;
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            color: white;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Animation for "Explora nuestros Founders" */
+        .founders-text {
+            font-size: 2rem;
+            font-weight: 500;
+            animation: float 2s ease-in-out infinite;
+        }
     </style>
 </head>
 
@@ -190,51 +234,50 @@
 
     <!-- Navigation Bar -->
     <nav>
+        <img src="https://media.discordapp.net/attachments/933858923692318730/1322203236031139933/image_7.png?ex=677156b8&is=67700538&hm=0c8073e7d94bcf817028bf15bb5ebc7f26e4ffff8bc2a063c3cde84172505ca2&=&format=webp&quality=lossless&width=840&height=472" alt="Logo">
         <ul>
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#tienda">Tienda</a></li>
-            <li><a href="#contact">Contacto</a></li>
+            <li><a href="/normativas" id="normativas-link">Normativas</a></li>
+            <li><a href="/tienda" id="tienda-link">Tienda</a></li>
+            <li><a href="/terms" id="terms-link">Terminós y Condiciones</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <h1>Bienvenido a Nuestro Servidor FiveM</h1>
+        <h1>Bienvenido a West Roleplay ®</h1>
         <div class="typing-container">
             <span class="typing-text" id="typing-text"></span>
         </div>
+        <div class="scroll-down">↓</div>
     </section>
 
-    <!-- Tienda Section -->
-    <section class="tienda" id="tienda">
-        <h2>Tienda del Servidor</h2>
-        <div class="tienda-cards">
-            <div class="card">
-                <h3>Ropa Exclusiva</h3>
-                <p>Consigue ropa personalizada para tu personaje dentro del servidor, ¡demuestra tu estilo único!</p>
+    <!-- Animation Section -->
+    <section class="animation-container">
+        <h2 class="founders-text">¡Explora nuestros Founders!</h2>
+        <div class="animation-box" style="background-image: url('https://media.discordapp.net/attachments/933858923692318730/1322693013809397830/28b66b19212e63388e0e292efe718833.jpg?ex=6771cd5c&is=67707bdc&hm=71e04ae4db09e503b15b3a325cfc16dc6ca20677561aa12facd1bfa024850f9b&=&format=webp&width=381&height=472');">
+            <div class="box-text">
+                <div>Piiiiro91k</div>
+                <div class="box-subtext">Founder</div>
             </div>
-            <div class="card">
-                <h3>Vehículos Premium</h3>
-                <p>Compra vehículos exclusivos para recorrer el mundo de FiveM con un toque especial.</p>
-            </div>
-            <div class="card">
-                <h3>Armas Especiales</h3>
-                <p>Equípate con las mejores armas y herramientas para sobrevivir a cualquier desafío.</p>
+        </div>
+        <div class="animation-box" style="background-image: url('https://media.discordapp.net/attachments/933858923692318730/1322693195091673159/e4898b063591d51ecb331813b8434466.jpg?ex=6771cd88&is=67707c08&hm=22bfc433a8011ce26483d52a5e8b28968031a1f58cfa7e4071f88ed79a9a62c4&=&format=webp&width=472&height=472');">
+            <div class="box-text">
+                <div>sanntilua</div>
+                <div class="box-subtext">Founder</div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Servidor FiveM. Todos los derechos reservados.</p>
-        <p>Visita nuestro <a href="https://discord.gg" target="_blank">Discord</a> para más detalles.</p>
+        <p>&copy; 2024 West Roleplay. Todos los derechos reservados.</p>
+        <p>Visita nuestro <a href="https://discord.gg/nkQGa7txyf" target="_blank">Discord</a> para más detalles.</p>
     </footer>
 
     <script>
         const texts = [
-            "¡Únete a la diversión, juega con amigos y explora nuevas aventuras!",
-            "Participa en eventos únicos, gana premios y personaliza tu experiencia.",
-            "¡Conoce nuevas personas y forma parte de una comunidad increíble!"
+            "Diversión Asegurada",
+            "Creado Pensando en Ti y en tu Experiencia",
+            "Servidor Rápido y Confiable, Hosteado en Argentina"
         ];
 
         let textIndex = 0;
@@ -245,7 +288,7 @@
                 typingTextElement.innerHTML += text.charAt(i);
                 setTimeout(function () {
                     typeText(text, i + 1, callback);
-                }, 100);
+                }, 50);
             } else if (callback) {
                 setTimeout(callback, 1000);
             }
@@ -264,15 +307,18 @@
         }
 
         function cycleText() {
-            deleteText(function () {
-                typeText(texts[textIndex], 0, function () {
-                    textIndex = (textIndex + 1) % texts.length;
-                    cycleText();
+            setTimeout(function () {
+                deleteText(function () {
+                    setTimeout(function () {
+                        typeText(texts[textIndex], 0, function () {
+                            textIndex = (textIndex + 1) % texts.length;
+                            cycleText();
+                        });
+                    }, 500);
                 });
-            });
+            }, 1200);
         }
 
-        // Start the typing effect
         cycleText();
     </script>
 
