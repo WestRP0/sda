@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tienda - West Roleplay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #2a2a2a;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav img {
+            height: 60px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff6600;
+        }
+
+        .tienda {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #333;
+        }
+
+        .tienda h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #ff6600;
+        }
+
+        .category {
+            margin: 30px 0;
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #ff6600;
+            text-align: center; /* Centrando el texto */
+        }
+
+        .tienda-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 productos por línea */
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: #444;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 1.6rem;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        .card .price {
+            font-size: 1.4rem;
+            color: #ff6600;
+            margin-bottom: 10px;
+        }
+
+        .card .buy-button {
+            background-color: #ff6600;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .card .buy-button:hover {
+            background-color: #e55d00;
+        }
+
+        footer {
+            background-color: #222;
+            padding: 20px;
+            text-align: center;
+            color: #888;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #ff6600;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Deshabilitar el enlace actual */
+        nav ul li a.disabled {
+            pointer-events: none;
+            color: #888;
+        }
+
+        /* Ajuste para que todos los productos tengan el mismo tamaño */
+        .tienda-cards .card {
+            width: 100%; /* Asegura que todos los productos tengan el mismo tamaño */
+        }
+
+        /* Ajuste para las últimas filas con 3 productos */
+        .last-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <!-- Logo alineado a la izquierda -->
+        <img src="https://media.discordapp.net/attachments/933858923692318730/1322203236031139933/image_7.png?ex=677156b8&is=67700538&hm=0c8073e7d94bcf817028bf15bb5ebc7f26e4ffff8bc2a063c3cde84172505ca2&=&format=webp&quality=lossless&width=840&height=472" alt="Logo">
+        <!-- Enlaces alineados a la derecha -->
+        <ul>
+            <li><a href="/inicio" id="inicio-link">Inicio</a></li>
+            <li><a href="/normativas" id="normativas-link">Normativas</a></li>
+            <li><a href="/terms" id="terms-link">Terminós y Condiciones</a></li>
+        </ul>
+    </nav>
+
+    <section class="tienda">
+        <h2>Bienvenido a la Tienda de West Roleplay</h2>
+        <p>Explora nuestros productos exclusivos...</p>
+        
+        <!-- Categoría 1 -->
+<div class="category">- Mafias -</div>
+<div class="tienda-cards">
+    <div class="card">
+        <h3>Mafia 1</h3>
+        <p>Miembros: 10 - Vehiculos: 1 Concesionario + 2 Gta Online - Acceso a Robos Exclusivos: Si</p>
+        <div class="price">Abrir Ticket</div>
+        <button class="buy-button" onclick="window.open('https://discord.gg/V8Pf2Cg6', '_blank')">Haz click aqui</button>
+    </div>
+    <div class="card">
+        <h3>Mafia 2</h3>
+        <p>Miembros: 12 - Vehiculos: 1 Vip + 2 Concesionario - Acceso a Robos Exclusivos: Si</p>
+        <div class="price">Abrir Ticket</div>
+        <button class="buy-button" onclick="window.open('https://discord.gg/V8Pf2Cg6', '_blank')">Haz click aqui</button>
+    </div>
+    <div class="card">
+        <h3>Mafia 3</h3>
+        <p>Miembros: 16 - Vehiculos: 1 Exclusivo + 2 Vips - Acceso a Robos Exclusivos: Si</p>
+        <div class="price">Abrir Ticket</div>
+        <button class="buy-button" onclick="window.open('https://discord.gg/V8Pf2Cg6', '_blank')">Haz click aqui</button>
+    </div>
+</div>
+
+
+        <!-- Categoría 2 -->
+        <div class="category">- Vehiculos -</div>
+        <div class="tienda-cards">
+            <div class="card">
+                <h3>Addon</h3>
+                <p>Velocidad: +450Km/H - Blindaje: No - Vehiculo Unico en el Servidor - Vehiculo Indestructible</p>
+                <div class="price">Abrir Ticket</div>
+                <button class="buy-button" onclick="window.open('https://discord.gg/V8Pf2Cg6', '_blank')">Haz click aqui</button>
+            </div>
+
+            <div class="card">
+                <h3>Vehiculo Exclusivo</h3>
+                <p>Velocidad: +350Km/H - Blindaje: No - Vehiculo Vulgar en el Servidor - Vehiculo Indestructible</p>
+                <div class="price">Abrir Ticket</div>
+                <button class="buy-button" onclick="window.open('https://discord.gg/V8Pf2Cg6', '_blank')">Haz click aqui</button>
+            </div>
+
+            <div class="card">
+                <h3>Addon Blindado</h3>
+                <p>Velocidad: +400Km/H - Blindaje: Si - Vehiculo Unico en el Servidor - Vehiculo Indestructible</p>
+                <div class="price">Abrir Ticket</div>
+                <button class="buy-button" onclick="window.open('https://discord.gg/V8Pf2Cg6', '_blank')">Haz click aqui</button>
+            </div>
+        </div>
+
+        <!-- Categoría 3 -->
+        <div class="category">- Vips -</div>
+        <div class="tienda-cards">
+            <div class="card">
+                <h3>Vip Deluxe</h3>
+                <p>Rango en Discord - Rango en el Chat - Acceso a Tiendas Vips (Consecionario y Armeria) - Sueldo IC (4.000.000) - Kit de Armas AP (Unica Entrega)</p>
+                <div class="price">Abrir Ticket</div>
+                <button class="buy-button" onclick="window.open('https://discord.gg/V8Pf2Cg6', '_blank')">Haz click aqui</button>
+            </div>
+
+            <div class="card">
+                <h3>Vip Diamond</h3>
+                <p>Rango en Discord - Rango en el Chat - Acceso a Tiendas Vips (Consecionario y Armeria) - Sueldo IC (7.000.000) - Kit de Armas SMG (Unica Entrega)</p>
+                <div class="price">Abrir Ticket</div>
+                <button class="buy-button" onclick="window.open('https://discord.gg/V8Pf2Cg6', '_blank')">Haz click aqui</button>
+            </div>
+
+            <div class="card">
+                <h3>Vip West</h3>
+                <p>Rango en Discord - Rango en el Chat - Acceso a Tiendas Vips (Consecionario y Armeria) - Sueldo IC (10.000.000) - Kit de Armas P90 (Unica Entrega)</p>
+                <div class="price">Abrir Ticket</div>
+                <button class="buy-button" onclick="window.open('https://discord.gg/V8Pf2Cg6', '_blank')">Haz click aqui</button>
+            </div>
+        </div>
+
+        <!-- Categoría 4 -->
+        <div class="category">- Propiedades -</div>
+        <div class="tienda-cards">
+            <div class="card">
+                <h3>Casa sin Garage</h3>
+                <p>Almacenamiento: Mediano - Garage: No - Mapeo: Opcional (Variacion de Precio, Hablar con Founder)</p>
+                <div class="price">Abrir Ticket</div>
+                <button class="buy-button" onclick="window.open('https://discord.gg/V8Pf2Cg6', '_blank')">Haz click aqui</button>
+            </div>
+
+            <div class="card">
+                <h3>Departamento</h3>
+                <p>Almacenamiento: Grande - Garage: Si - Mapeo: Opcional (Variacion de Precio, Hablar con Founder)</p>
+                <div class="price">Abrir Ticket</div>
+                <button class="buy-button" onclick="window.open('https://discord.gg/V8Pf2Cg6', '_blank')">Haz click aqui</button>
+            </div>
+
+            <div class="card">
+                <h3>Casa con Garage</h3>
+                <p>Almacenamiento: Mediano - Garage: Si - Mapeo: Opcional (Variacion de Precio, Hablar con Founder)</p>
+                <div class="price">Abrir Ticket</div>
+                <button class="buy-button" onclick="window.open('https://discord.gg/V8Pf2Cg6', '_blank')">Haz click aqui</button>
+            </div>
+        </div>
+
+        <!-- Categoría 5 -->
+        <div class="category">- Extras -</div>
+        <div class="tienda-cards">
+            <div class="card">
+                <h3>Ped Vanilla</h3>
+                <p>Ped Vanilla a la Eleccion del Comprador</p>
+                <div class="price">Abrir Ticket</div>
+                <button class="buy-button" onclick="window.open('https://discord.gg/V8Pf2Cg6', '_blank')">Haz click aqui</button>
+            </div>
+
+            <div class="card">
+                <h3>Punto de Lavado</h3>
+                <p>Punto de Lavado de Dinero Privado sin Recargo</p>
+                <div class="price">Abrir Ticket</div>
+                <button class="buy-button" onclick="window.open('https://discord.gg/V8Pf2Cg6', '_blank')">Haz click aqui</button>
+            </div>
+
+            <div class="card">
+                <h3>Ped Addon</h3>
+                <p>Ped Addon con archivo a la Eleccion del Comprador</p>
+                <div class="price">Abrir Ticket</div>
+                <button class="buy-button" onclick="window.open('https://discord.gg/V8Pf2Cg6', '_blank')">Haz click aqui</button>  
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 West Roleplay. Todos los derechos reservados.</p>
+        <p>Visita nuestro <a href="https://discord.gg/nkQGa7txyf" target="_blank">Discord</a> para más detalles.</p>
+    </footer>
+
+</body>
+
+</html>
