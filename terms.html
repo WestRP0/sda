@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Términos y Condiciones - West RP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #121212, #1a1a1a);
+            color: white;
+            line-height: 1.6;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        nav {
+            background: #1a1a1a;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            border-bottom: 2px solid #333;
+            transition: background 0.3s;
+        }
+
+        nav img {
+            height: 60px;
+            animation: fadeIn 1s ease;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            padding: 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            color: #ff6600;
+            transform: scale(1.2);
+            background-color: rgba(255, 102, 0, 0.2);
+        }
+
+        .hero {
+            background: url('https://media.discordapp.net/attachments/933858923692318730/1322707301387468900/image.png?ex=6771daab&is=6770892b&hm=7b03060b637ecad035d84956f1a9dcc2e67f13be6f7c2228565d02550a5bcd79&=&format=webp&quality=lossless&width=1024&height=457') center/cover no-repeat;
+            height: 400px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            font-size: 2.5rem;
+            font-weight: bold;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 2s ease-out;
+        }
+
+        .hero h1 {
+            margin: 0;
+            animation: fadeInText 2s forwards;
+        }
+
+        .hero p {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            animation: fadeInText 3s forwards;
+        }
+
+        .normativas {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #1d1d1d;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 1.5s ease-out;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .normativas h2 {
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #ff6600;
+            animation: fadeIn 2s ease;
+        }
+
+        h3 {
+            font-size: 2rem;
+            margin-top: 30px;
+            color: #ff6600;
+            border-bottom: 2px solid #444;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            animation: fadeInLeft 1s ease;
+        }
+
+        ul {
+            list-style-type: none;
+            margin-left: 20px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0;
+            animation: fadeIn 2s ease forwards;
+        }
+
+        li strong {
+            color: #ff6600;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            padding: 30px 0;
+            text-align: center;
+            color: #888;
+            font-size: 1rem;
+            margin-top: 50px;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        footer a {
+            color: #ff6600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        /* Animaciones */
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .hero {
+                height: 300px;
+                font-size: 2rem;
+            }
+
+            .normativas {
+                padding: 20px;
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <img src="https://media.discordapp.net/attachments/933858923692318730/1322693107950817373/image_7.png?ex=6771cd73&is=67707bf3&hm=e31c047f578039b5a3f6e6e68d0479de87fbc6d696f221acb6e431aaaa4e8aaa&=&format=webp&quality=lossless&width=840&height=472" alt="Logo">
+        <ul>
+            <li><a href="/inicio" id="inicio-link">Inicio</a></li>
+            <li><a href="/tienda" id="tienda-link">Tienda</a></li>
+            <li><a href="/normativas" id="normativas-link" class="active">Términos y Condiciones</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Bienvenido a West RP</h1>
+        <p>Consulta nuestros términos y condiciones antes de continuar</p>
+    </section>
+
+    <section class="normativas">
+        <h2>Términos y Condiciones</h2>
+
+        <h3>Sección A: Definiciones</h3>
+        <ul>
+            <li><strong>A1. Partes Involucradas</strong>
+                <ul>
+                    <li><strong>1.1</strong> Cualquier uso de la palabra “servidor”, “nosotros”, “nuestro”, “nos”, refiere a West RP (www.westrp.net).</li>
+                    <li><strong>1.2</strong> Cualquier uso de “usted”, refiere al visitante individual del servidor, sea persona, empresa, entidad legal, organización empresarial, etc.</li>
+                </ul>
+            </li>
+            <li><strong>A2. Modificaciones a los TOS (Términos)</strong>
+                <ul>
+                    <li><strong>1.1</strong> West RP se reserva el derecho de modificar estos términos y condiciones en cualquier momento.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Sección B: Donaciones</h3>
+        <ul>
+            <li><strong>B1. Generalidades sobre Donaciones</strong>
+                <ul>
+                    <li><strong>1.1</strong> Al realizar cualquier tipo de donación, la persona que realiza el pago acepta y entiende que los fondos utilizados para realizar el mismo provienen de forma lícita.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Sección C: Reembolso de Donaciones</h3>
+        <ul>
+            <li><strong>C1. Prohibición de Retiro</strong>
+                <ul>
+                    <li><strong>1.1</strong> Está prohibido retirar cualquier donación realizada al servidor.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Sección D: Edad y Autorización</h3>
+        <ul>
+            <li><strong>D1. Requisitos de Edad</strong>
+                <ul>
+                    <li><strong>1.1</strong> Al realizar una donación, usted declara que tiene al menos 13 años de edad.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 West Roleplay. Todos los derechos reservados.</p>
+        <p>Visita nuestro <a href="https://discord.gg/nkQGa7txyf" target="_blank">Discord</a> para más detalles.</p>
+    </footer>
+
+</body>
+
+</html>
